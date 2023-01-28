@@ -1,0 +1,171 @@
+.row {
+  justify-content: center;
+  background: linear-gradient(120deg, #9932CC 0%, #9932CC 100%), linear-gradient(120deg, #9400D3 0%, #9932CC 100%), linear-gradient(130deg, #00F0FF 0%, #0000009c 100%), radial-gradient(110% 140% at 15% 90%, #ffffff 0%, #1700A4 100%), radial-gradient(100% 100% at 50% 0%, #AD00FF 0%, #00FFE0 100%), radial-gradient(100% 100% at 50% 0%, #00FFE0 0%, #7300A9 80%), linear-gradient(30deg, #9932CC 0%, #2200AA 100%);
+  background-blend-mode: overlay, color, overlay, difference, color-dodge, difference, normal;
+  height: 100vh;
+
+}
+
+
+.register {
+  background-color: rgba(255, 255, 255, 0.801);
+  border-radius: 0px 20px 20px 0px;
+  height: 670px;
+  margin-top: 50px;
+
+}
+
+.register .intro {
+  width: 100%;
+  height: 90px;
+  text-align: center;
+}
+
+.register .intro h2 {
+  color: MidnightBlue
+}
+
+.register .intro p {
+  font-size: 20px;
+  color: rgba(25, 25, 112, 0.848)
+}
+
+.register .form-group label {
+  margin: 0 0 0 10px;
+}
+
+.register .form-group h1 p {
+  margin: 0 0 0 10px;
+  font-size: 12px;
+  font-weight: bold;
+
+
+}
+
+.register .form-group input {
+  border-radius: 20px;
+  font-family: none;
+
+}
+
+.register .form-group .form-check span {
+  color: blue;
+}
+
+.register #already {
+  margin-top: 10px;
+}
+
+.register #already a {
+  text-decoration: none;
+}
+
+.register button {
+  background-color: rgba(153, 50, 204, 0.797);
+  color: white;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 30px;
+}
+
+.image {
+  padding: 0;
+  height: 670px;
+  margin-top: 50px;
+  background-image: url(./../../../assets/images/intro.jpeg);
+  background-size: cover;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.image h1 {
+  text-align: center;
+}
+
+.image h1 i {
+  margin-right: 10px;
+}
+
+@media (max-width:780px) {
+  .row {
+    height: auto;
+
+  }
+
+  .register {
+    margin: 0px;
+    border-radius: 0px;
+    height: auto;
+    margin-bottom: 50px;
+
+  }
+
+  .register .intro {
+
+    height: auto;
+
+  }
+
+  .register .intro h2 {
+    text-align: center;
+    font-size: 30px;
+
+
+  }
+
+  .register .intro p {
+    font-size: 20px;
+
+  }
+
+
+  .image {
+
+
+    border-radius: 0;
+  }
+
+
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+  .row {
+    height: 100vh;
+
+  }
+
+  .register {
+
+
+    height: auto;
+    margin:30px 0;
+
+  }
+
+  .register .intro {
+
+    height: auto;
+
+  }
+
+  .register .intro h2 {
+    text-align: center;
+    font-size: 30px;
+
+
+  }
+
+  .register .intro p {
+    font-size: 20px;
+
+  }
+
+
+  .image {
+
+    margin: 30px   0;
+    height: auto;
+  }
+
+
+
+}

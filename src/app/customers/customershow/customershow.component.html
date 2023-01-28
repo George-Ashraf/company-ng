@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+
+<div class="show col-lg-6">
+  <div class="img">
+    <img [src]="customer.img" alt="">
+  </div>
+  <div class="info ">
+    <h1><span>id:</span>{{id}}</h1>
+    <h1><span>name:</span>{{customer.name}}</h1>
+    <h1><span>phone:</span>{{customer.phone}}</h1>
+    <h1><span>Address:</span>{{customer.address}}</h1>
+    <h1><span>Email:</span>{{customer.email}}</h1>
+    <button routerLink="/customerlist">Go back</button>
+  </div>
+</div>

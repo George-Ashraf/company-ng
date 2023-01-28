@@ -1,0 +1,244 @@
+header {
+  width: 100%;
+  height: auto;
+  padding-bottom: 15px;
+  background-color: rgba(137, 43, 226, 0.258);
+}
+
+header h1 {
+  color: rgba(137, 43, 226, 0.949);
+  font-family: none;
+  font-weight: bold;
+  margin: 25px 0 0 90px;
+}
+
+header h1 i {
+  margin-right: 20px;
+}
+
+header button {
+  width: 130px;
+  height: 65px;
+  border-radius: 20px;
+  background-color: DarkViolet;
+  border: none;
+  color: white;
+  margin: 15px 0 0 30px;
+  transition: all 1s;
+}
+
+header button:hover {
+  background-color: rgba(137, 43, 226, 0.801);
+  border-radius: 10px;
+}
+
+header button i {
+  margin-right: 5px;
+}
+
+.managers {
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 10px;
+  background: #9932CC;
+  overflow: hidden;
+  animation-name: diamond-in-hesitate;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+
+@keyframes diamond-in-hesitate {
+  0% {
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  }
+  50% {
+    clip-path: polygon(45% 50%, 50% 25%, 55% 50%, 50% 75%);
+  }
+  100% {
+    clip-path: polygon(-50% 50%, 50% -50%, 150% 50%, 50% 150%);
+  }
+}
+
+[transition-style="in:diamond:hesitate"] {
+  animation: 1.5s cubic-bezier(.25, 1, .30, 1) diamond-in-hesitate both;
+}
+
+.managers .manager {
+  margin: 50px 60px 30px 65px;
+  height: auto;
+  padding: 0;
+  background-color: white;
+  border-radius: 20px;
+  border: DarkViolet solid 1px;
+
+  box-shadow: 27px -27px 64px #6b238f,
+    -27px 27px 64px #c741ff;
+
+}
+
+.managers .manager .header {
+  width: 100%;
+  height: 90px;
+  border-radius: 20px 20px 0 0;
+  background-color: rgba(137, 43, 226, 0.149);
+  position: relative;
+}
+
+.managers .manager .header img {
+  width: 80px;
+  height: 73px;
+  margin: 10px 0 0 15px;
+  border: darkviolet solid 2px;
+  border-radius: 13px;
+}
+
+.managers .manager .header h1 {
+  font-size: 20px;
+  margin: 20px 15px;
+}
+
+.managers .manager .header h1 p {
+  color: darkviolet;
+}
+
+.managers .manager .header .dropdown {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: darkviolet;
+}
+
+.managers .manager .header .dropdown .dropdown-menu {
+  min-width: 20px;
+  border-radius: 30px;
+  transition: all 2s;
+  transform: translateY(50px) rotate(-13deg);
+}
+
+.managers .manager .header .dropdown .dropdown-menu .dropdown-item {
+  border-radius: 30px;
+
+}
+
+.managers .manager .header .dropdown .dropdown-menu .fa-user-large-slash {
+  color: red;
+}
+
+.managers .manager .header .dropdown .dropdown-menu .fa-user-pen {
+  color: blue;
+}
+
+.managers .manager .header .dropdown .dropdown-menu .fa-eye {
+  color: green;
+}
+
+.managers .manager ul {
+  font-family: none;
+  margin-top: 30px;
+  font-size: 20px;
+
+}
+
+.managers .manager ul li {
+  list-style-type: none;
+}
+
+.managers .manager ul li span {
+  color: darkviolet;
+}
+
+.managers .alert {
+
+  margin: 100px auto;
+  text-align: center;
+  font-size: 32px;
+  border-radius: 15px;
+}
+
+@media (max-width:780px) {
+
+  header .row {
+    justify-content: center;
+  }
+
+  header h1 {
+
+    margin: 15px 0 0 0;
+  }
+
+  header button {
+
+    margin: 15px 0px 0px 10px;
+  }
+
+
+  .managers .manager {
+    margin: 50px 0 0 0;
+
+
+  }
+
+  .managers .manager .header .dropdown .dropdown-menu {
+
+    transition: none;
+    margin-right: 50px;
+    transform: none;
+  }
+
+
+
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+
+
+  .managers .manager .header {
+
+    height: auto;
+    padding-bottom: 5px;
+
+  }
+
+  .managers .manager .header .row {
+    display: block;
+  }
+
+  .managers .manager .header img {
+
+    margin: 10px 80px 0 80px;
+
+  }
+
+  .managers .manager .header h1 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .managers .manager ul {
+    font-family: none;
+    margin-top: 10px;
+    font-size: 20px;
+
+
+  }
+
+  .managers .manager ul li {
+    list-style-type: none;
+    position: relative;
+    right: 30px;
+    font-size: 15px;
+
+  }
+
+  .managers .manager ul li span {
+    color: darkviolet;
+
+  }
+
+
+
+
+
+
+
+}

@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+<header>
+  <div class="container-fluid">
+    <div class="row">
+      <h1><i class="fa-solid fa-users"></i>customers</h1>
+      <button routerLink="/createcustomer"><i class="fa-solid fa-user-plus"></i>Add customer</button>
+    </div>
+  </div>
+</header>
+<div class="customers">
+  <table class="table customer col-lg-8 " *ngIf="empty then ifdatanotfound else ifdatafound ">
+
+  </table>
+</div>
+<ng-template #ifdatafound>
+  <div class="customers">
+    <table class="table customer col-lg-8 animate__animated animate__fadeInDown" >
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">image</th>
+          <th scope="col">Name</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let data of alldata">
+        <tr>
+          <th scope="row">{{data.id}}</th>
+          <td><img [src]="data.img" alt=""></td>
+          <td>{{data.name}} </td>
+          <td>
+            <div class="dropdown">
+              <i class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"
+                class="fa-solid fa-ellipsis"></i>
+              <div class="dropdown-menu ">
+                <button (click)="delete(data.id)" class="dropdown-item" type="button"><i class="fa-solid fa-user-large-slash "></i></button>
+                <button class="dropdown-item" routerLink="/customerupdate/{{data.id}}" type="button"><i class="fa-solid fa-user-pen"></i></button>
+                <button class="dropdown-item"  routerLink="/customershow/{{data.id}}" type="button"><i class="fa-solid fa-eye"></i></button>
+              </div>
+            </div>
+          </td>
+
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</ng-template>
+<ng-template #ifdatanotfound>
+  <div class="customers">
+    <p class="alert alert-danger col-lg-6">
+      <i class="fa-solid fa-database"></i> No data found
+    </p>
+  </div>
+</ng-template>

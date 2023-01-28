@@ -1,0 +1,151 @@
+<div class="container-fluid ">
+  <div class="row">
+    <div class="image animate__animated animate__fadeInDown col-lg-4 col-md-4">
+        <h1 [ngSwitch]="formcompany.invalid">
+        <p *ngSwitchCase="true"> <i [style]="{'color':'#9932CC'}"class="fa-solid fa-clipboard"></i>registeration form </p>
+        <p *ngSwitchCase="false"> <i [style]="{'color':'green','transform':'rotate(20deg)'}"class="fa-solid fa-clipboard"></i> registeration form</p>
+      </h1>
+
+    </div>
+    <div class="register animate__animated animate__fadeInDown col-lg-4 col-md-4">
+      <form [formGroup]=formcompany>
+        <div class="intro">
+          <h2>welcome to company system</h2>
+          <p> the best solution to organize your employees and customers</p>
+        </div>
+        <div class="form-row">
+          <!-- founder name -->
+          <div class="form-group col-md-6">
+            <label>founder name </label>
+            <h1 *ngIf="foundername.invalid && foundername.touched"
+              class="text-danger animate__animated animate__bounceIn">
+              <p *ngIf="foundername.errors.required"> please enter data</p>
+              <p *ngIf="foundername.errors.minlength">
+                Actual length:{{foundername.errors.minlength.actualLength}}
+                minimum length:{{foundername.errors.minlength.requiredLength}}
+              </p>
+            </h1>
+            <input type="text" maxlength="30" placeholder="first name and last name" name="founder"
+              formControlName="foundername" class="form-control">
+          </div>
+          <div class="form-group col-md-6">
+            <!-- phone -->
+            <label>phone</label>
+            <h1 *ngIf="phone.invalid && phone.touched" class="text-danger animate__animated animate__bounceIn">
+              <p *ngIf="phone.errors.required"> please enter data</p>
+            </h1>
+            <input type="number" maxlength="20" placeholder="01223226011" formControlName="phone" name="phone"
+              class="form-control">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <!-- Email -->
+            <label for="inputEmail4">Email</label>
+            <h1 class="text-danger  animate__animated animate__bounceIn" *ngIf="Email.invalid && Email.touched">
+              <p *ngIf="Email.errors.required">please enter data </p>
+              <p *ngIf="Email.errors.email">please enter email </p>
+              <p *ngIf="Email.errors.minlength">
+                actual length {{Email.errors.minlength.actualLength}}
+                minmum length {{Email.errors.minlength.requiredLength}}
+              </p>
+
+            </h1>
+            <input type="email" maxlength="60"  class="form-control" formControlName="Email" name="email"
+              placeholder="toto@example.com">
+          </div>
+          <!-- password -->
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <h1 class="text-danger  animate__animated animate__bounceIn" *ngIf="password.invalid && password.touched">
+              <p *ngIf="password.errors.required"> please enter data</p>
+            </h1>
+            <input type="password" maxlength="50" name="password" formControlName="password" class="form-control">
+          </div>
+        </div>
+        <div class="form-row">
+          <!-- field of the company -->
+          <div class="form-group col-md-6">
+            <label for="inputCity">field of the company </label>
+            <h1 *ngIf="field.invalid && field.touched" class="text-danger  animate__animated animate__bounceIn">
+              <p *ngIf="field.errors.required"> please enter data</p>
+              <p *ngIf="field.errors.minlength">
+                actual length {{field.errors.minlength.actualLength}}
+                minmum length {{field.errors.minlength.requiredLength}}
+              </p>
+            </h1>
+            <input type="text" maxlength="20" placeholder="marketing" name="field" formControlName="field"
+              class="form-control">
+          </div>
+          <!-- type of the company -->
+          <div class="form-group col-md-6">
+            <label for="inputCity">type of the company </label>
+            <h1 *ngIf="type.invalid && type.touched" class="text-danger  animate__animated animate__bounceIn">
+              <p *ngIf="type.errors.required"> please enter data</p>
+              <p *ngIf="type.errors.minlength">
+                actual length {{type.errors.minlength.actualLength}}
+                minmum length {{type.errors.minlength.requiredLength}}
+              </p>
+            </h1>
+            <input type="text" maxlength="30" placeholder="private, public...another" name="type" formControlName="type"
+              class="form-control">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <!-- company name -->
+            <label for="inputEmail4">Company name</label>
+            <h1 *ngIf="companyname.invalid && companyname.touched"
+              class="text-danger  animate__animated animate__bounceIn">
+              <p *ngIf="companyname.errors.required"> please enter data</p>
+              <p *ngIf="companyname.errors.minlength">
+                actual length : {{companyname.errors.minlength.actualLength}}
+                minmum lenght :{{companyname.errors.minlength.requiredLength}}
+              </p>
+
+            </h1>
+            <input type="text" maxlength="30" class="form-control" name="companyname" formControlName="companyname"
+              placeholder="Enter company name">
+          </div>
+          <div class="form-group col-md-6">
+            <!-- logo -->
+            <label for="inputPassword4">logo</label>
+            <h1 *ngIf="logo.invalid && logo.touched" class="text-danger  animate__animated animate__bounceIn">
+              <p *ngIf="logo.errors.required">
+                please enter data
+              </p>
+
+            </h1>
+            <input type="url" placeholder="url image" formControlName="logo" name="logo" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <!-- Address -->
+          <label>Address</label>
+          <h1 *ngIf="address.invalid && address.touched" class="text-danger  animate__animated animate__bounceIn">
+            <p *ngIf="address.errors.required"> please enter data</p>
+            <p *ngIf="address.errors.minlength">
+              actual length:{{address.errors.minlength.actualLength}}
+              minimum length:{{address.errors.minlength.requiredLength}}
+            </p>
+          </h1>
+          <input type="text"  class="form-control" name="address" formControlName="address"
+            placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" formControlName="check" name="check" type="checkbox" value="option2">
+            <label class="form-check-label">
+              I agree to <span>Terms</span> ,<span>privacy policy</span> and <span>fees</span>
+            </label>
+          </div>
+        </div>
+
+        <button (click)="submit()" [disabled]="formcompany.invalid" class="btn">Register</button>
+      </form>
+      <p id="already">Already have an account ? <a routerLink="/login">log in</a></p>
+
+    </div>
+  </div>
+</div>

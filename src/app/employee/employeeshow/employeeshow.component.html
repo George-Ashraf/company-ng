@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<div class="show col-lg-7">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="aside1 col-lg-6">
+        <h1>{{id}}</h1>
+        <div class="info">
+          <h1>{{employee.empname}}</h1>
+          <p>{{employee.empwork}}</p>
+        </div>
+         <div class="img">
+        <img [src]="employee.empimg" alt="">
+         </div>
+         <div class="contact">
+           <h1>contact</h1>
+           <p> <span>email:</span>{{employee.empemail}}</p>
+            <p> <span>Address:</span>{{employee.address}}</p>
+             <p> <span>Number</span>{{employee.empphone}}</p>
+         </div>
+      </div>
+      <div class="aside2 col-lg-6">
+          <div class="personal">
+            <h1>personal information</h1>
+             <p> <span>Age:</span>{{employee.empage}}</p>
+          </div>
+          <div class="personal">
+            <h1>job information</h1>
+             <p> <span>Departement:</span>{{employee.empdepartement}}</p>
+          </div>
+           <div class="personal">
+            <h1>skills</h1>
+             <p>{{employee.skills}}</p>
+          </div>
+          <div class="button">
+            <button routerLink="/employeelist">Go back</button>
+          </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

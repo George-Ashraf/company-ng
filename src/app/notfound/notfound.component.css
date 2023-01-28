@@ -1,0 +1,51 @@
+.notfound {
+  width: 100%;
+  height: 100vh;
+  background-color: #9932CC;
+  overflow: hidden;
+}
+
+.notfound .error {
+  height: 400px;
+  border-radius: 49px;
+  background: #9932CC;
+  box-shadow: 28px 28px 56px #7928a1, -28px -28px 56px #b93df7;
+  margin: 120px auto 0 auto;
+  text-align: center;
+}
+.notfound .error .h1{
+  width: 150px;
+  height: 30px;
+  border-radius: 15px;
+  margin: auto;
+  background-color: white;
+}
+.notfound .error .h1 h1{
+  font-size: 20px;
+
+}
+
+.notfound .error h2{
+  color: black;
+  font-size: 150px;
+  }
+.notfound .error h2 i{
+  margin-top: 30px;
+font-size: 130px;
+  color: white;
+  margin: 0  15px;
+}
+.notfound .error h3{
+  color: white;
+}
+.notfound .error button{
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  margin-top: 50px;
+  color: white;
+  background: #9932CC;
+  box-shadow: 28px 28px 56px #7928a1, -28px -28px 56px #b93df7;
+}
+

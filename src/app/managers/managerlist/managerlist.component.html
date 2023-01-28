@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+<header>
+  <div class="container-fluid">
+    <div class="row">
+      <h1><i class="fa-solid fa-user-tie"></i>managers</h1>
+      <button routerLink="/createmanager"><i class="fa-solid fa-user-plus"></i>Add manager</button>
+    </div>
+  </div>
+</header>
+<div class="managers" *ngIf="empty then ifnodata else ifdatafound">
+
+
+</div>
+
+<ng-template #ifdatafound>
+  <div class="managers">
+
+  <div class="container-fluid">
+  <div class="row">
+    <div class="manager animate__animated animate__fadeInDown col-lg-3" *ngFor="let data of alldata" >
+      <div class="header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="dropdown">
+              <i class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"
+                class="fa-solid fa-ellipsis"></i>
+              <div class="dropdown-menu ">
+                <button class="dropdown-item" (click)="delete(data.id)" type="button" ><i  class="fa-solid fa-user-large-slash "></i></button>
+                <button class="dropdown-item" routerLink="/managerupdate/{{data.id}}" type="button"><i class="fa-solid fa-user-pen"></i></button>
+                <button class="dropdown-item" routerLink="/managershow/{{data.id}}"  type="button"><i class="fa-solid fa-eye"></i></button>
+              </div>
+            </div>
+            <img [src]="data.manimg" alt="employee">
+            <h1>{{data.manname}}<p>{{data.manwork}}</p>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <ul>
+        <li><span>ID:</span> {{data.id}}</li>
+        <li><span> manage:</span> {{data.mandepartement}} department</li>
+        <li><span>email:</span>{{data.manemail}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</ng-template>
+
+<ng-template #ifnodata>
+  <div class="managers">
+  <p class="alert alert-danger col-lg-6">
+    <i class="fa-solid fa-database"></i> No data found
+  </p>
+</div>
+</ng-template>
+

@@ -1,0 +1,129 @@
+header {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+  background-color: rgba(137, 43, 226, 0.258);
+}
+
+header h1 {
+  color: rgba(137, 43, 226, 0.949);
+  font-family: none;
+  font-weight: bold;
+  margin: 25px 0 0 90px;
+}
+
+header h1 i {
+  margin-right: 20px;
+}
+
+header button {
+  width: 130px;
+  height: 65px;
+  border-radius: 20px;
+  background-color: DarkViolet;
+  border: none;
+  color: white;
+  margin: 15px 0 0 30px;
+  transition: all 1s;
+}
+
+header button:hover {
+  background-color: rgba(137, 43, 226, 0.801);
+  border-radius: 10px;
+}
+
+header button i {
+  margin-right: 5px;
+}
+.customers{
+  width: 100%;
+  height: 100vh;
+  background: #9932CC;
+  overflow: hidden;
+  animation-name:square-in-hesitate  ;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+@keyframes square-in-hesitate {
+  0% {
+    clip-path: inset(100% 100% 100% 100%);
+  }
+  40% {
+    clip-path: inset(33% 33% 33% 33%);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+[transition-style="in:square:hesitate"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-hesitate both;
+}
+.customers .customer{
+  margin: 50px auto 20px auto;
+  background: #fcf5ff;
+
+  box-shadow:  27px -27px 64px #6b238f,
+               -27px 27px 64px #c741ff;
+
+}
+.customers .customer thead {
+  background-color: rgba(137, 43, 226, 0.258);
+  color: #892be2f2;
+
+}
+.customers .customer tbody tr td img{
+  width: 60px;
+  height: 55px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+
+.customers .customer tbody tr td .dropdown .dropdown-menu {
+  min-width: 20px;
+  border-radius: 30px;
+  transition: all 2s;
+  transform: translateY(50px) rotate(-13deg);
+}
+
+.customers .customer tbody tr td .dropdown .dropdown-menu .dropdown-item {
+  border-radius: 30px;
+
+}
+
+.customers .customer tbody tr td .dropdown .dropdown-menu .fa-user-large-slash {
+  color: red;
+}
+
+.customers .customer tbody tr td .dropdown .dropdown-menu .fa-user-pen {
+  color: blue;
+}
+
+.customers .customer tbody tr td .dropdown .dropdown-menu .fa-eye {
+  color: green;
+}
+.customers .alert{
+
+  margin:100px auto;
+  text-align: center;
+  font-size: 32px;
+  border-radius: 15px;
+}
+@media (max-width:780px) {
+  header .row{
+    justify-content: center;
+   }
+  header h1 {
+
+    margin:15px 0 0 0;
+  }
+
+  header button {
+
+    margin: 15px 0px 0px 10px;
+  }
+
+}
+
+

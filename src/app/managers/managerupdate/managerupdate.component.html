@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+
+<header>
+  <h1><i class="fa-solid fa-user-pen"></i>update manager</h1>
+</header>
+<div class="bg">
+  <div class="add   col-lg-8">
+    <form #company="ngForm">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4"> ID</label> <label  class="text-danger animate__animated animate__bounceIn" *ngIf="id.invalid && id.touched"><label  *ngIf="id.errors.required"> please enter data</label></label>
+          <input type="number" name="id" #id="ngModel" [(ngModel)]="manager.id" class="form-control" required  maxlength="10" placeholder="2301">
+        </div>
+        <div class="form-group col-md-6">
+          <label>Name</label> <label  class="text-danger animate__animated animate__bounceIn" *ngIf="name.invalid && name.touched"><label  *ngIf="name.errors.required"> please enter data</label>  <label *ngIf="name.errors.minlength">minmum length:{{name.errors.minlength.requiredLength}} Actual length:{{name.errors.minlength.actualLength}}</label> </label>
+          <input type="text" name="name" #name="ngModel" [(ngModel)]="manager.manname" class="form-control"  required maxlength="30" minlength="10" placeholder="first and last name">
+        </div>
+        <div class="form-group col-md-6">
+          <label> img</label> <label  class="text-danger animate__animated animate__bounceIn" *ngIf="img.invalid && img.touched"><label  *ngIf="img.errors.required"> please enter data</label></label>
+          <input type="url" name="img" #img="ngModel" [(ngModel)]="manager.manimg" class="form-control"  required>
+        </div>
+        <div class="form-group col-md-6">
+          <label> phone</label> <label  class="text-danger animate__animated animate__bounceIn" *ngIf="phone.invalid && phone.touched"><label  *ngIf="phone.errors.required"> please enter data</label></label>
+          <input type="text" name="phone" #phone="ngModel" [(ngModel)]="manager.manphone" class="form-control"  required maxlength="15" placeholder="+20 1223226011">
+        </div>
+        <div class="form-group col-md-6">
+          <label> Email</label> <label  class="text-danger animate__animated animate__bounceIn" *ngIf="email.invalid && email.touched"><label  *ngIf="email.errors.required"> please enter data</label> <label *ngIf="email.errors.minlength">minmum length:{{email.errors.minlength.requiredLength}} Actual length:{{email.errors.minlength.actualLength}}</label></label>
+          <input type="text" name="email" #email="ngModel" [(ngModel)]="manager.manemail" class="form-control"  required minlength="10" maxlength="30" placeholder="name@exaple.com">
+        </div>
+        <div class="form-group col-md-6">
+          <label>Address </label> <label  class="text-danger animate__animated animate__bounceIn" *ngIf="address.invalid && address.touched"><label  *ngIf="address.errors.required"> please enter data</label> <label *ngIf="address.errors.minlength">minmum length:{{address.errors.minlength.requiredLength}} Actual length:{{address.errors.minlength.actualLength}}</label></label>
+          <input type="text" name="address" #address="ngModel" [(ngModel)]="manager.address" class="form-control"  required minlength="10" maxlength="50" placeholder="cairo">
+        </div>
+        <div class="form-group col-md-6">
+          <label>age</label> <label  class="text-danger animate__animated animate__bounceIn" *ngIf="age.invalid && age.touched"><label  *ngIf="age.errors.required"> please enter data</label></label>
+          <input type="number" name="age" #age="ngModel" [(ngModel)]="manager.manage" class="form-control"  required minlength="1" maxlength="2"  placeholder="21">
+        </div>
+        <div class="form-group col-md-6">
+          <label>job</label> <label  class="text-danger animate__animated animate__bounceIn" *ngIf="job.invalid && job.touched"><label  *ngIf="job.errors.required"> please enter data</label> <label *ngIf="job.errors.minlength">minmum length:{{job.errors.minlength.requiredLength}} Actual length:{{job.errors.minlength.actualLength}}</label></label>
+          <input type="text" name="job" #job="ngModel" [(ngModel)]="manager.manwork" class="form-control"  required maxlength="40" minlength="10" placeholder="front end developer">
+        </div>
+        <div class="form-group col-md-6">
+          <label>skills</label> <label  class="text-danger animate__animated animate__bounceIn" *ngIf="skills.invalid && skills.touched"><label  *ngIf="skills.errors.required"> please enter data</label></label>
+          <input type="text" name="skills" #skills="ngModel" [(ngModel)]="manager.skills" class="form-control"  required placeholder="comunication skills">
+        </div>
+        <div class="form-group col-md-6">
+          <label>Departement</label> <label  class="text-danger animate__animated animate__bounceIn" *ngIf="departement.invalid && departement.touched"><label  *ngIf="departement.errors.required"> please enter data</label><label *ngIf="departement.errors.minlength">minmum length:{{departement.errors.minlength.requiredLength}} Actual length:{{departement.errors.minlength.actualLength}}</label> </label>
+          <input type="text" name="departement" #departement="ngModel" minlength="2" maxlength="30" [(ngModel)]="manager.mandepartement" class="form-control"  required placeholder="it">
+        </div>
+      </div>
+      <div class="button">
+        <button [disabled]="company.invalid" (click)="edit()">submit</button>
+      </div>
+    </form>
+  </div>
+</div>

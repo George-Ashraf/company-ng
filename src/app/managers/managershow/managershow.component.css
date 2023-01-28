@@ -1,0 +1,132 @@
+
+.show {
+  height: auto;
+  padding-bottom: 30px;
+  margin: 40px auto 30px auto;
+  background-color: PapayaWhip;
+  border-radius: 40px;
+  box-shadow:  -17px -17px 62px #666666,
+               17px 17px 62px #ffffff;
+
+}
+
+.show .aside1 {
+  height: auto;
+  border-radius: 20px 0 0 20px;
+}
+
+.show .aside1 h1 {
+  text-align: center;
+  color: darkviolet;
+}
+
+.show .aside1 .info {
+  width: 300px;
+  height: 250px;
+  margin: 50px auto 0 auto;
+}
+
+.show .aside1 .info h1 {
+  text-align: center;
+  font-size: 70px;
+}
+
+.show .aside1 .info p {
+  text-align: center;
+  font-size: 30px;
+}
+
+.show .aside1 .img {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+.show .aside1 .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.show .aside1 .contact {
+  width: 300px;
+  height: auto;
+  margin: auto;
+
+
+}
+
+.show .aside1 .contact h1 {
+  padding-top: 30px;
+  text-align: start;
+  color: darkviolet;
+  border-bottom: 3px darkviolet solid;
+}
+
+.show .aside1 .contact p {
+  font-size: 25px;
+  color: dark;
+}
+
+.show .aside1 .contact p span {
+  color: darkviolet;
+
+}
+
+.show .aside2 {
+  height: auto;
+  border-radius: 0 20px 20px 0;
+}
+
+.show .aside2 .personal {
+  width: 300px;
+  height: auto;
+  padding-bottom: 20px;
+  margin: auto;
+}
+
+.show .aside2 .personal h1 {
+  font-size: 25px;
+  padding-top: 30px;
+  text-align: start;
+  color: darkviolet;
+  border-bottom: 3px darkviolet solid;
+}
+
+.show .aside2 .personal p {
+  font-size: 25px;
+  color: dark;
+}
+
+.show .aside2 .personal p span {
+  color: darkviolet;
+
+}
+
+.show .aside2 .button {
+  width: 100px;
+  height: 50px;
+  padding-bottom: 20px;
+  margin: auto;
+}
+
+.show .aside2 .button button {
+  width: 100px;
+  height: 50px;
+  border: none;
+  background-color: darkviolet;
+  color: white;
+  border-radius: 15px;
+
+}
+@media (min-width:992px) and (max-width:1199px) {
+
+  .show .aside2 .personal {
+    width: 250px;
+    margin-left:25px;
+
+  }
+
+
+
+}
+
