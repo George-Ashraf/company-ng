@@ -25,6 +25,32 @@
       "type": "private",
       "check": true,
       "id": 2302
+    },
+    {
+      "foundername": "George Ashraf",
+      "field": "marketing",
+      "companyname": "smile company",
+      "address": "zamalk street",
+      "Email": "georgeid20@gmail.com",
+      "password": "12345",
+      "phone": 1223226011,
+      "logo": "hhhhhhhhhhhhh",
+      "type": "private",
+      "check": true,
+      "id": 2303
+    },
+    {
+      "foundername": "George Ashraf",
+      "field": "marketing",
+      "companyname": "creative company",
+      "address": "zamalk street",
+      "Email": "georgeid20@gmail.com",
+      "password": "1234",
+      "phone": 1223226011,
+      "logo": "https://scontent.fcai20-4.fna.fbcdn.net/v/t1.6435-9/139239018_3633497273396152_3346716086227192448_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=cScVpjPWY9gAX9k8jZG&_nc_ht=scontent.fcai20-4.fna&oh=00_AfC_MtvHyFUVD466XVXPRIzbcq_0lHLY2dNLjz_VNkzJRQ&oe=63FF9CA0",
+      "type": "private",
+      "check": true,
+      "id": 2304
     }
   ],
   "employees": [
@@ -43,21 +69,21 @@
   ],
   "managers": [
     {
-      "id": "2302",
-      "manimg": "https://scontent.fcai20-4.fna.fbcdn.net/v/t1.6435-9/139239018_3633497273396152_3346716086227192448_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=OxFomXnGDk0AX-kwIV9&_nc_ht=scontent.fcai20-4.fna&oh=00_AfB0kX8v3urOExZlw-fEfxRZENfsfQQt16rk_c2sBuaE7Q&oe=63F74320",
-      "manname": "george shawky",
-      "manemail": "georgeid20@gmail.com",
+      "id": 2023,
+      "manname": "George eid",
+      "manimg": "https://scontent.fcai20-4.fna.fbcdn.net/v/t1.6435-9/139239018_3633497273396152_3346716086227192448_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=cScVpjPWY9gAX9k8jZG&_nc_ht=scontent.fcai20-4.fna&oh=00_AfC_MtvHyFUVD466XVXPRIzbcq_0lHLY2dNLjz_VNkzJRQ&oe=63FF9CA0",
       "manphone": "01223226011",
+      "manemail": "georgeid20@gmail.com",
       "address": "zamalk street",
-      "mandepartement": "information technology",
-      "manwork": "Angular developer",
-      "manage": "22",
-      "skills": "communication skillssssssss"
+      "manage": 21,
+      "manwork": "front end developer",
+      "skills": "communication skills",
+      "mandepartement": "it"
     }
   ],
   "customers": [
     {
-      "id": 55555,
+      "id": 2020,
       "name": "George ashraf",
       "img": "https://scontent.fcai20-4.fna.fbcdn.net/v/t1.6435-9/139239018_3633497273396152_3346716086227192448_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=6B2gwBWbfxMAX_bMFyk&_nc_ht=scontent.fcai20-4.fna&oh=00_AfAfWojv9isVSTbVsyXoEQ6Ke0nqpNJFyM0pARru42Xmyw&oe=63FA1E60",
       "phone": "01223226011",
